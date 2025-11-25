@@ -31,4 +31,3 @@ import re
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# youtube api key - AIzaSyAA9eTbY21j9nlw_mDfCEOSTIiXk7iuNFk
