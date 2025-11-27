@@ -10,30 +10,25 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
 # sample user input
-user_input = 'iowa election'
+user_input = 'facebook'
 user_input_embedding = model.encode(user_input)
 
 
 # filtered dataset that was obtained from original (put link here for ref)
 # df = pd.read_csv('https://www.kaggle.com/datasets/prakratikadekar/guardian-filtered', sep='\t')
 
-kaggle.api.dataset_download_files(
-    'prakratikadekar/guardian-filtered',
-    path='data/',
-    unzip=True
-)
+# kaggle.api.dataset_download_files(
+#     'prakratikadekar/guardian-filtered',
+#     path='data/',
+#     unzip=True
+# )
 
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_colwidth', None)
-
-df = pd.read_csv('data/guardian_filtered.csv', encoding='utf-8')
+df = pd.read_csv('data/guardian_filtered.csv')
 print('read dataset')
 
 print('columns: ', df.columns)
 print('dataset type: ', df['bodyContent'].dtype)
-# print('first 5 entries: ', df.head())
+print('first 5 entries: ', df.head())
 
 # object -> string
 df['bodyContent'] = df['bodyContent'].astype(str)
@@ -54,44 +49,34 @@ df['cleaned_bodyContent'] = df['bodyContent'].apply(clean_datacol)
 df['cleaned_title'] = df['webTitle'].apply(clean_datacol)
 print('applied cleaning')
 
-# df['embedded_title'] = df['cleaned_title'].apply(lambda x: model.encode(x))
+df['embedded_title'] = df['cleaned_title'].apply(lambda x: model.encode(x))
+print('apply embeddings to titles')
 
-# model documentation: https://sbert.net/examples/sentence_transformer/applications/computing-embeddings/README.html
-
-df_first10 = df.loc[:9]
-
-# df_first10['embedded_title'] = df_first10['cleaned_title'].apply(lambda x: model.encode(x))
-# print('apply embeddings to titles')
-
-# title_embeddings = np.vstack(df_first10['embedded_title'].values)
-# similarities = cosine_similarity([user_input_embedding], title_embeddings)
-# print('used cosine similarities with body content')
-
-
-# now the article's body content is a vector where similar texts will have vectors close together
-df_first10['embedded_bodyContent'] = df_first10['cleaned_bodyContent'].apply(lambda x: model.encode(x))
-print('model has been applied to body content')
-
-article_embeddings = np.vstack(df_first10['embedded_bodyContent'].values)
-print('gathered article embeddings')
-
-similarities = cosine_similarity([user_input_embedding], article_embeddings)
+title_embeddings = np.vstack(df['embedded_title'].values)
+similarities = cosine_similarity([user_input_embedding], title_embeddings)
 print('used cosine similarities with body content')
 
+
+# # now the article's body content is a vector where similar texts will have vectors close together
+# df['embedded_bodyContent'] = df['cleaned_bodyContent'].apply(lambda x: model.encode(x))
+# print('model has been applied to body content')
+
+# article_embeddings = np.vstack(df['embedded_bodyContent'].values)
+# print('gathered article embeddings')
+
+# similarities = cosine_similarity([user_input_embedding], article_embeddings)
+# print('used cosine similarities with body content')
+
 # top 3
-# print('similarity shape', similarities.shape)
-similarities = np.array(similarities)
-
-# flatten
-row = similarities[0].flatten() # converts shape from (1, __) to (__, 1)
-
-top_matches = np.argsort(row)[-3:][::-1] # indices of top 3 largest similarities from cosine
+top_matches = similarities.sort()[-3:][:]
 recommended_guardian_articles = df.iloc[top_matches]
-print(recommended_guardian_articles[['sectionName', 'webTitle', 'webUrl']])
 
-# end_time = time.time()
 
-# print('total time taken: ', end_time - start_time)
+print(recommended_guardian_articles[['title', 'sectionName', 'webTitle', 'webUrl']])
+
+end_time = time.time()
+
+print('total time taken: ', end_time - start_time)
 
 
 
