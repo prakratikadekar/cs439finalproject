@@ -1,0 +1,7 @@
+
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
