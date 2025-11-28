@@ -2,14 +2,18 @@ from dotenv import load_dotenv
 import os
 from googleapiclient.discovery import build 
 
-load_dotenv('api.env')
-youtube_api = os.getenv('YOUTUBE_API_KEY')
-
-youtube = build('youtube', 'v3', developerKey=youtube_api)
-
 
 # search and then puts the results into a list
 def search_videos(input):
+    
+    # load api
+    load_dotenv('api.env')
+    youtube_api = os.getenv('YOUTUBE_API_KEY')
+
+    # https://developers.google.com/youtube/v3/docs
+    youtube = build('youtube', 'v3', developerKey=youtube_api)
+
+
     request = youtube.search().list(
         q=input, # what you search for
         part='snippet', # title, descp, thumbnails, channel, publish date
@@ -18,10 +22,19 @@ def search_videos(input):
     )
     response = request.execute()
 
-    for item in response['items']:
-        title = item['snippet']['title']
-        video_id = item['id']['videoID']
-        print(f'{title} - youtube.com/watch?v={video_id}')
+   
+    with open('recommended_videos.txt', 'a', encoding='utf-8') as file: 
+        file.write('\n\nNEW RUN:\n')
+        file.write(f'Results for: {input}\n\n')
+
+        # looks through the results in key items
+        # then clicks into the snippet and in there obtains title
+        # then clicks into another part called id and obtains the videoid
+        for result in response['items']:
+            title = result['snippet']['title']
+            video_id = result['id']['videoId']
+
+            file.write(f'{title} - youtube.com/watch?v={video_id}\n')
 
             
-search_videos('us economy')
+search_videos('tariffs america')
