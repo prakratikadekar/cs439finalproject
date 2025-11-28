@@ -10,11 +10,28 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
 # sample user input
-user_input = 'trump'
-user_input_embedding = model.encode(user_input)
+
 
 
 # ----------- STEP 1: Filter dataset for just political and computer science/technology topics ---------------------------------------
+
+
+# df = pd.read_csv('guardian_articles.csv')
+
+# sections_to_keep = [
+#     "US news",
+#     "World news",
+#     "News",
+#     "Australia news",
+#     "UK news",
+#     "Politics",
+#     "Technology"
+# ]
+
+# filtered_news = df[df['sectionName'].isin(sections_to_keep)]
+# filtered_news = filtered_news.reset_index(drop=True)
+
+# filtered_news.to_csv('guardian_filtered.csv', index=False)
 
 # filtered dataset that was obtained from original (put link here for ref)
 df = pd.read_csv('https://www.kaggle.com/datasets/prakratikadekar/guardian-filtered', sep='\t')
@@ -33,15 +50,15 @@ pd.set_option('display.max_colwidth', None)
 
 
 df = pd.read_csv('data/guardian_filtered.csv', encoding='utf-8')
-print('read dataset')
+# print('read dataset')
 
 # print('columns: ', df.columns)
 # print('dataset type: ', df['bodyContent'].dtype)
 # print('first 5 entries: ', df.head())
 
 # object -> string
-df['bodyContent'] = df['bodyContent'].astype(str)
-df['webTitle'] = df['webTitle'].astype(str)
+# df['bodyContent'] = df['bodyContent'].astype(str)
+# df['webTitle'] = df['webTitle'].astype(str)
 
 
 # ----------- STEP 3: Clean dataset to get rid of extra HTML from kaggle + extra whitespace  ---------------------------------------
@@ -64,43 +81,67 @@ df['webTitle'] = df['webTitle'].astype(str)
 # ----------- STEP 4: Use the Sentence Transformer model to encode both the titles and body content of articles with sentiment values (384 dimensional vector). This is a pretrained model  ---------------------------------------
 
 # model documentation: https://sbert.net/examples/sentence_transformer/applications/computing-embeddings/README.html
+
 # news_content = df['cleaned_title'] + " " + df['cleaned_bodyContent']
 # news_embeddings = model.encode(news_content.tolist(), batch_size=100)
 # print('model has been applied')
 
 
-# np.save('news_embeddings.npy', news_embeddings)
-
 # ----------- STEP 5: After running above code once, saved it to an npy file so we do not need to rerun again - these are our news embeddings  ---------------------------------------
 
+# np.save('news_embeddings.npy', news_embeddings)
 
-news_embeddings = np.load('news_embeddings.npy')
-print('shape of news embeddings', news_embeddings.shape)
+# print('shape of news embeddings', news_embeddings.shape)
 
 # ----------- STEP 6: Cosine similarity: use the embeddings of user input and news data to find which articles are similar to  ---------------------------------------
-
-
-user_input_embedding = np.atleast_2d(user_input_embedding)
-user_input_normalized = user_input_embedding / np.linalg.norm(user_input_embedding, axis=1, keepdims=True)
-
-news_embeddings_normalized = news_embeddings / np.linalg.norm(news_embeddings, axis=1, keepdims=True) # column -> 1 dimension across all articles (rows)
-
-similarities = np.dot(user_input_normalized, news_embeddings_normalized.T)
-
 # ----------- STEP 7: Gather highest 3 cosine similarities of input and embedding data ---------------------------------------
-
-
-top_matches = np.argsort(similarities[0])[-3:][::-1] # indices of top 3 largest similarities from cosine
-recommended_guardian_articles = df.iloc[top_matches]
-
-# print('top matches shape: ', top_matches.shape)
-
 # ----------- STEP 8: Write the articles in the txt file ---------------------------------------
 
+def get_top_news_matches(user_input): 
 
-with open('recommended_news.txt', 'a', encoding='utf-8') as file: 
-    file.write('\n\nNEW RUN:\n')
-    file.write(recommended_guardian_articles[['sectionName', 'webTitle', 'webUrl']].to_string())
+    user_input_embedding = model.encode(user_input)
+
+    news_embeddings = np.load('news_embeddings.npy')
+
+
+    user_input_embedding = np.atleast_2d(user_input_embedding)
+    user_input_normalized = user_input_embedding / np.linalg.norm(user_input_embedding, axis=1, keepdims=True)
+
+    news_embeddings_normalized = news_embeddings / np.linalg.norm(news_embeddings, axis=1, keepdims=True) # column -> 1 dimension across all articles (rows)
+
+    similarities = np.dot(user_input_normalized, news_embeddings_normalized.T)
+
+    best_matches = np.argsort(similarities[0])[-3:][::-1] # indices of top 3 largest similarities from cosine
+    # print('best matches shape: ', best_matches.shape)
+
+    recommended_guardian_articles = df.iloc[best_matches]
+
+    with open('recommended_news.txt', 'a', encoding='utf-8') as file: 
+        file.write('\n\nNEW RUN:\n')
+        file.write(recommended_guardian_articles[['sectionName', 'webTitle', 'webUrl']].to_string())
+
+
+
+# main:
+get_top_news_matches('ai')
+
+
+
+
+
+
+
+
+
+
+
+
+# ----------------------- ARCHIVE CODE -------------------------------------------------------
+
+
+
+
+
 
 
 # similarities = cosine_similarity([user_input_embedding], article_embeddings)
