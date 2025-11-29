@@ -33,7 +33,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # filtered_news.to_csv('guardian_filtered.csv', index=False)
 
-# filtered dataset that was obtained from original (put link here for ref)
+# filtered dataset that was obtained from original 
 df = pd.read_csv('https://www.kaggle.com/datasets/prakratikadekar/guardian-filtered', sep='\t')
 
 kaggle.api.dataset_download_files(
@@ -110,7 +110,9 @@ def get_top_news_matches(user_input):
     news_embeddings_normalized = news_embeddings / np.linalg.norm(news_embeddings, axis=1, keepdims=True) # column -> 1 dimension across all articles (rows)
 
     similarities = np.dot(user_input_normalized, news_embeddings_normalized.T)
-
+    
+    # get index for the 3 highest similarities in relation to news embeddings
+    # order from greatest to least similarity
     best_matches = np.argsort(similarities[0])[-3:][::-1] # indices of top 3 largest similarities from cosine
     # print('best matches shape: ', best_matches.shape)
 

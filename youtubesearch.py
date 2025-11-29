@@ -37,4 +37,4 @@ def search_videos(input):
             file.write(f'{title} - youtube.com/watch?v={video_id}\n')
 
             
-search_videos('tariffs america')
+search_videos('python')
