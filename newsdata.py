@@ -125,7 +125,7 @@ def get_top_news_matches(user_input):
 
 
 # main:
-get_top_news_matches('ai')
+# get_top_news_matches('ai')
 
 
 
