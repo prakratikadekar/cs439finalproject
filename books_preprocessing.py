@@ -1,4 +1,3 @@
-# from sentence_transformers import SentenceTransformer
 import gzip
 import time
 import re
@@ -7,6 +6,7 @@ import json
 import csv
 
 gz_path = "ol_dump_editions_2025-11-06.txt.gz"
+author_gz_path = "ol_dump_authors_2025-11-06.txt.gz"
 
 # removed "General"
 # maybe to remove: History, Economics
@@ -50,10 +50,10 @@ def get_all_necessary_books():
 
                 
                 for i, line in enumerate(zip):
-                    if i % 100000 == 0:
+                    if i % 10000 == 0:
                         print(f"Line Number in Zip: {i}")
 
-                    if "/languages/eng" in line and "/works/" in line and "isbn_" in line:
+                    if "/languages/eng" in line and "/works/" in line and "isbn_" in line and '"description":' in line:
 
                         if_added = 0
 
@@ -83,12 +83,32 @@ def get_all_necessary_books():
                 end = time.time()
     return end - start
 
+def get_author_name():
+    author_lookup_dict = {}
+    with gzip.open(author_gz_path, 'rt', encoding='utf-8', errors='ignore') as zip:
+        for i, line in enumerate(zip):
+            if i % 100000 == 0:
+                print(f"Line Number in Author Zip: {i}")
+            split_line_by_tab = line.strip().split('\t')
+            key_data = split_line_by_tab[1].strip()
+            name_data = split_line_by_tab[4].strip()
+
+            correct_json_format_name = json.loads(name_data)
+
+            actual_name = correct_json_format_name.get('name', "")
+
+            if actual_name:
+                author_lookup_dict[key_data] = actual_name
+
+    return author_lookup_dict
+
 # title, isbn, description, subjects
 def clean_data_to_necessities():
+    author_lookup_dict = get_author_name()
     with open("languagelist.txt", 'r', encoding = 'utf-8') as data:
         with open("book_data.csv", "w", newline = '', encoding = 'utf-8') as file:
             csv_writer = csv.writer(file, delimiter = '\t')
-            csv_writer.writerow(['Title', 'ISBN-10', 'ISBN-13', 'Subjects', 'Description'])
+            csv_writer.writerow(['Title', 'Authors', 'ISBN-10', 'ISBN-13', 'Subjects', 'Description'])
 
             start = time.time()
 
@@ -98,15 +118,21 @@ def clean_data_to_necessities():
 
                 split_line_by_tab = line.strip().split('\t')
                 all_data = split_line_by_tab[4].strip()
-                try:
-                    correct_json_format_data = json.loads(all_data)
-                except Exception as e:
-                    print(f"Parse Error: {all_data[:200]}")
-                    print("Bad line: {a}")
+
+                correct_json_format_data = json.loads(all_data)
+
                 title_data = correct_json_format_data.get('title', "")
                 isbn_10_data = ",".join(correct_json_format_data.get('isbn_10', []))
                 isbn_13_data = ",".join(correct_json_format_data.get('isbn_13', []))
                 subjects_data = ",".join(correct_json_format_data.get('subjects', []))
+
+                author_data = correct_json_format_data.get('authors', [])
+                author_key_data = [author.get('key', '') for author in author_data]
+                author_names = [author_lookup_dict.get(key, key) for key in author_key_data]
+
+                author_final_data = ",".join(author_names)
+
+
                 description_dict = correct_json_format_data.get('description', {})
                 if isinstance(description_dict, dict):
                     description = description_dict.get('value', "")
@@ -117,7 +143,7 @@ def clean_data_to_necessities():
 
                 description = description.replace('\n', ' ').replace('\r', ' ')
 
-                csv_writer.writerow([title_data, isbn_10_data, isbn_13_data, subjects_data, description])
+                csv_writer.writerow([title_data, author_final_data, isbn_10_data, isbn_13_data, subjects_data, description])
             
             end = time.time()
     return end - start
