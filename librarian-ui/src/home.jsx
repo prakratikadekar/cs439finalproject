@@ -1,28 +1,44 @@
-import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import SearchBar from "../components/SearchBar";
+import {useState} from 'react';
 
-export default function Home() {
-    const [query, setQuery] = useState("");
-    const navigate = useNavigate();
+export default function Home(ToRecommendationPage) {
+    const [userQuery, setUserQuery] = useState("")
+    const [loading, setLoading] = useState(false)
 
-    const handleSubmit = () => {
-        if (!query.trim()) return;
-        navigate(`/results?query=${encodeURIComponent(query)}`);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!userQuery.trim()) {
+            return;
+        }
+
+        setLoading(true);
+
+        try {
+            // Send query to backend
+            const response = await fetch('http://localhost:5000/api/recommend',{
+                method:'POST', 
+                headers: {'Content-Type': 'application/json',},
+                body: JSON.stringify({userQuery: userQuery.trim() }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to get Recommedation');
+            }
+
+            const data = await response.json();
+
+            ToRecommendationPage(data, userQuery.trim());
+        }
+
+        catch (error) {
+            console.error('Error:', error);
+            alert('Failed to get recommendations. Please try again.');
+        }
+
+        finally {
+            setLoading(false);
+        }
     };
 
-
-    // const handleSearch = async() => {
-    //     const response = await fetch("http://localhost:5000/recommend", {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json"},
-    //         body: JSON.stringify({query}),
-        
-    //     });
-
-    //     const results = await response.json();
-    //     console.log(results);
-    // };
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-white px-4">
@@ -32,13 +48,36 @@ export default function Home() {
                 Type in a political or tech related topic and the Librarian will find the sources for you.
             </p>
 
-            <SearchBar
-                placeholder="I want to learn about..."
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                onSubmit={handleSubmit}
-            />
-
+            <div>
+                <div>
+                    <input type="text" value = {userQuery} onChange = {(e) => setUserQuery(e.target.value)} onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            handleSubmit(e);
+                        }
+                    }}
+                    placeholder = "e.g, Clustering Algorithms, Government Shutdown"
+                    disabled = {loading}
+                    
+                    onFocus = {(e) => e.target.style.borderColor = '#a1dffe'}
+                    onBlur = {(e) => e.target.style.borderColor = '#d7ba8e'}
+                    />
+                    <button
+                        onClick = {handleSubmit} disabled = {loading || !userQuery.trim()}
+                        onMouseEnter = {(e) => {
+                            if (!loading && userQuery.trim()) {
+                                e.target.style.backgroundColor = '#a1dffe';
+                            }
+                        }}
+                        onMouseLeave = {(e) => {
+                            if (!loading && userQuery.trim()) {
+                                e.target.style.backgroundColor = '#d7ba8e';
+                            }
+                        }}
+                    >
+                        {loading ? 'Looking For Recs' : 'Seach'}
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }

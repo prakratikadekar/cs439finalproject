@@ -1,4 +1,4 @@
-import books_preprocessing
+from booksearch import get_top_3_book_groups
 from newsdata import get_top_news_matches
 from youtubesearch import search_videos
 
@@ -12,6 +12,7 @@ def recommend_work():
 
     videos = search_videos(user_input)
     news = get_top_news_matches(user_input)
+    books = get_top_3_book_groups(user_input)
 
 
     return jsonify({

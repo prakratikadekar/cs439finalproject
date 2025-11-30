@@ -1,4 +1,5 @@
 from sentence_transformers import SentenceTransformer
+from sklearn.cluster import KMeans
 import pandas as pd
 import numpy as np
 import os
@@ -27,25 +28,36 @@ def get_top_3_book_groups(user_input):
     user_input_embedding = np.atleast_2d(user_input_embedding)
     user_input_normalized = user_input_embedding / np.linalg.norm(user_input_embedding, axis=1, keepdims=True)
 
-    book_embedding_normalized = book_embedding / np.linalg.norm(book_embedding, axis=1, keepdims=True) # column -> 1 dimension across all articles (rows)
+    book_embedding_normalized = book_embedding / np.linalg.norm(book_embedding, axis=1, keepdims=True)
 
     similarities = np.dot(user_input_normalized, book_embedding_normalized.T)
 
-    best_matches = np.argsort(similarities[0])[-5:][::-1] # indices of top 3 largest similarities from cosine
-    # print('best matches shape: ', best_matches.shape)
+    top_matches = np.argsort(similarities[0])[-3:][::-1]
 
-    recommended = df.iloc[best_matches]
+    # top_matches_embeddings = book_embedding_normalized[top_matches]
+
+    # kmeans = KMeans(3).fit(top_matches_embeddings)
+    # clusters = kmeans.labels_
+
+    # recommendation_list = []
+
+    # for i in range(3):
+    #     books_in_cluster_i = np.where(clusters == i)[0]
+    #     top_match_cluster_embeddings = top_matches_embeddings[books_in_cluster_i]
+    #     cosine_similarity = np.dot(user_input_normalized, top_match_cluster_embeddings.T)
+    #     most_similar_in_cluster = books_in_cluster_i[np.argmax(cosine_similarity)]
+    #     recommendation_list.append(top_matches[most_similar_in_cluster])
+    
+    recommended = df.iloc[top_matches]
 
     with open('recommended_books.txt', 'a', encoding='utf-8') as file: 
         file.write('\n\nNEW RUN:\n')
         file.write(recommended[['Title', 'Authors', 'ISBN-10', 'ISBN-13', 'Description']].to_string())
 
-
-
 def main():
     if not os.path.exists("book_embedding.npy"):
         create_embeddings()
-    user_input = "Clustering Algorithms"
+    user_input = "Artificial Intelligence"
     get_top_3_book_groups(user_input)
 
 df = pd.read_csv('book_data.csv', sep = '\t', encoding = 'utf-8')
