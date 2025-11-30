@@ -22,7 +22,8 @@ def search_videos(input):
     )
     response = request.execute()
 
-   
+    results_list = []
+
     with open('recommended_videos.txt', 'a', encoding='utf-8') as file: 
         file.write('\n\nNEW RUN:\n')
         file.write(f'Results for: {input}\n\n')
@@ -36,5 +37,10 @@ def search_videos(input):
 
             file.write(f'{title} - youtube.com/watch?v={video_id}\n')
 
-            
-search_videos('python')
+            line = f'{title} - youtube.com/watch?v={video_id}\n'
+            results_list.append(line)
+
+    return results_list
+
+# search_videos('australia economy')
+ 

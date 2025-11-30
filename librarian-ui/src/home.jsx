@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-export default function Home(ToRecommendationPage) {
+export default function Home({ToRecommendationPage}) {
     const [userQuery, setUserQuery] = useState("")
     const [loading, setLoading] = useState(false)
 
@@ -9,7 +9,7 @@ export default function Home(ToRecommendationPage) {
         if (!userQuery.trim()) {
             return;
         }
-
+ 
         setLoading(true);
 
         try {
@@ -17,11 +17,11 @@ export default function Home(ToRecommendationPage) {
             const response = await fetch('http://localhost:5000/api/recommend',{
                 method:'POST', 
                 headers: {'Content-Type': 'application/json',},
-                body: JSON.stringify({userQuery: userQuery.trim() }),
+                body: JSON.stringify({query: userQuery.trim() }),
             });
 
             if (!response.ok) {
-                throw new Error('Failed to get Recommedation');
+                throw new Error('Failed to get recommendations');
             }
 
             const data = await response.json();
@@ -74,7 +74,7 @@ export default function Home(ToRecommendationPage) {
                             }
                         }}
                     >
-                        {loading ? 'Looking For Recs' : 'Seach'}
+                        {loading ? 'Looking For Recs' : 'Search'}
                     </button>
                 </div>
             </div>

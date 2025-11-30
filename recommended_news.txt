@@ -17,3 +17,261 @@ NEW RUN:
 5954   Technology                                                   2016: the year AI came of age                                        https://www.theguardian.com/technology/2016/dec/28/2016-the-year-ai-came-of-age
 45173  Technology  As artificial intelligence gets smarter, is it game over for humans? | Letters  https://www.theguardian.com/technology/2022/mar/31/as-artificial-intelligence-gets-smarter-is-it-game-over-for-humans
 25157  Technology                               The benefits of AI and machine learning | Letters                             https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                                                  webUrl
+8374   Technology          Artificial intelligence survey finds UK public broadly optimistic  https://www.theguardian.com/technology/2017/apr/25/artificial-intelligence-survey-finds-uk-public-broadly-optimistic-mass-unemployment
+25157  Technology                          The benefits of AI and machine learning | Letters                                              https://www.theguardian.com/technology/2019/sep/30/the-benefits-of-ai-and-machine-learning
+6763   Technology  AI system as good as experts at recognising skin cancers, say researchers                                    https://www.theguardian.com/technology/2017/jan/25/ai-artificial-intelligence-recognise-skin-cancers
+
+NEW RUN:
+      sectionName                                                                   webTitle                                                                                                       webUrl
+15507     US news                  US to hit EU with steel and aluminum tariffs, report says  https://www.theguardian.com/us-news/2018/may/30/trump-administration-tariff-steel-aluminum-eu-trade-tension
+15038  World news  Merkel faces tough White House trade talks as Macron a hard act to follow               https://www.theguardian.com/world/2018/apr/27/angela-merkel-donald-trump-trade-emmanuel-macron
+6521      US news          Anyone, anyone? What happened when the US last introduced tariffs              https://www.theguardian.com/us-news/2017/jan/29/smoot-hawley-tariffs-protectionism-donald-trump
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending

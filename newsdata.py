@@ -34,13 +34,13 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 # filtered_news.to_csv('guardian_filtered.csv', index=False)
 
 # filtered dataset that was obtained from original 
-df = pd.read_csv('https://www.kaggle.com/datasets/prakratikadekar/guardian-filtered', sep='\t')
+# df = pd.read_csv('https://www.kaggle.com/datasets/prakratikadekar/guardian-filtered', sep='\t')
 
-kaggle.api.dataset_download_files(
-    'prakratikadekar/guardian-filtered',
-    path='data/',
-    unzip=True
-)
+# kaggle.api.dataset_download_files(
+#     'prakratikadekar/guardian-filtered',
+#     path='data/',
+#     unzip=True
+# )
 
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
@@ -50,7 +50,6 @@ pd.set_option('display.max_colwidth', None)
 
 
 df = pd.read_csv('data/guardian_filtered.csv', encoding='utf-8')
-# print('read dataset')
 
 # print('columns: ', df.columns)
 # print('dataset type: ', df['bodyContent'].dtype)
@@ -123,10 +122,13 @@ def get_top_news_matches(user_input):
         file.write(recommended_guardian_articles[['sectionName', 'webTitle', 'webUrl']].to_string())
 
 
+    return recommended_guardian_articles[['sectionName', 'webTitle', 'webUrl']].to_string()
+
+
 
 # main:
-# get_top_news_matches('ai')
-
+# get_top_news_matches('tariffs')
+ 
 
 
 

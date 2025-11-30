@@ -50,16 +50,29 @@ def get_top_3_book_groups(user_input):
     
     recommended = df.iloc[top_matches]
 
-    with open('recommended_books.txt', 'a', encoding='utf-8') as file: 
-        file.write('\n\nNEW RUN:\n')
-        file.write(recommended[['Title', 'Authors', 'ISBN-10', 'ISBN-13', 'Description']].to_string())
+    # with open('recommended_books.txt', 'a', encoding='utf-8') as file: 
+    #     file.write('\n\nNEW RUN:\n')
+    #     file.write(recommended[['Title', 'Authors', 'ISBN-10', 'ISBN-13', 'Description']].to_string())
 
-def main():
-    if not os.path.exists("book_embedding.npy"):
-        create_embeddings()
-    user_input = "Artificial Intelligence"
-    get_top_3_book_groups(user_input)
+    final_recommendations = []
+ 
+    for _, row in recommended.iterrows():
+        book_dict = {
+            'title': str(row['Title']) if pd.notna(row['Title']) else 'Unknown Title',
+            'author': str(row['Authors']) if pd.notna(row['Authors']) else 'Unknown Author',
+            'isbn10': str(row['ISBN-10']) if pd.notna(row['ISBN-10']) else '',
+            'isbn13': str(row['ISBN-13']) if pd.notna(row['ISBN-13']) else '',
+            'description': str(row['Description']) if pd.notna(row['Description']) else 'No Description Provided'
+        }
+        final_recommendations.append(book_dict)
+    return final_recommendations
 
-df = pd.read_csv('book_data.csv', sep = '\t', encoding = 'utf-8')
+# def main():
+#     if not os.path.exists("book_embedding.npy"):
+#         create_embeddings()
+#     user_input = "Artificial Intelligence"
+#     get_top_3_book_groups(user_input)
+
+df = pd.read_csv('data/book_data.csv', sep = '\t', encoding = 'utf-8')
 model = SentenceTransformer("all-MiniLM-L6-v2")
-main()
+# main()

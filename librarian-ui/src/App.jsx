@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Home from "./home.jsx";
-import Recommend from './Recommendation.jsx';
+import Recommend from './recommendation.jsx';
 
 function App() {
     const [currentPage, SetCurrentPage] = useState('home');
@@ -18,7 +18,7 @@ function App() {
         setUserQuery('')
         SetCurrentPage('home')
     };
-
+ 
 
     
     return (
