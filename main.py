@@ -20,7 +20,13 @@ from flask_cors import CORS
 # print(books)
  
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources = {
+    r"/api/*": {
+        "origin": ["http://localhost:5173"],
+        "methods": ["GET", "POST"],
+        "allows_headers": ["Content-Type"]
+    }
+})
 
 @app.route('/api/recommend', methods=['POST'])
 def recommend_work():

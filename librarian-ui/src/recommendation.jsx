@@ -48,7 +48,7 @@ const Cards = ({item}) => (
     </div>
 );
 
-const RecommedationColumn = ({title, items }) => (
+const RecommendationColumn = ({title, items }) => (
     <div className="flex-1 min-w-0">
         <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2" style={{borderColor: '#d7ba8e'}}> 
             {title}
@@ -101,9 +101,9 @@ export default function Recommend({recommendations, query, ToHomePage}) {
                     </button>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <RecommedationColumn title = "Books" items = {books} />
-                    <RecommedationColumn title = "articles" items = {articles} />
-                    <RecommedationColumn title = "Youtube Videos" items = {videos} />
+                    <RecommendationColumn title = "Books" items = {books} />
+                    <RecommendationColumn title = "articles" items = {articles} />
+                    <RecommendationColumn title = "Youtube Videos" items = {videos} />
                 </div>
             </div>
         </div>

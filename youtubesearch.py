@@ -34,11 +34,20 @@ def search_videos(input):
         for result in response['items']:
             title = result['snippet']['title']
             video_id = result['id']['videoId']
+            channel = result['snippet']['channelTitle']
+            description = result['snippet']['description']
 
             file.write(f'{title} - youtube.com/watch?v={video_id}\n')
+            video_link = f'https://youtube.com/watch?v={video_id}'
 
-            line = f'{title} - youtube.com/watch?v={video_id}\n'
-            results_list.append(line)
+            video_dict = {
+                'title': title,
+                'channel': channel,
+                'description': description,
+                'url': video_link
+            }
+
+            results_list.append(video_dict)
 
     return results_list
 

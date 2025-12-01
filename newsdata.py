@@ -2,7 +2,7 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 import re
 import numpy as np
-import kaggle
+# import kaggle
 import time 
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -121,8 +121,17 @@ def get_top_news_matches(user_input):
         file.write('\n\nNEW RUN:\n')
         file.write(recommended_guardian_articles[['sectionName', 'webTitle', 'webUrl']].to_string())
 
+    final_recommendation = []
 
-    return recommended_guardian_articles[['sectionName', 'webTitle', 'webUrl']].to_string()
+    for _, row in recommended_guardian_articles.iterrows():
+        article_dict = {
+            'title': str(row['webTitle']) if pd.notna(row['webTitle']) else 'Unknown Title',
+            'description': str(row['sectionName']) if pd.notna(row['sectionName']) else 'News',
+            'url': str(row['webUrl']) if pd.notna(row['webUrl']) else '',
+        }
+        final_recommendation.append(article_dict)
+
+    return final_recommendation
 
 
 
