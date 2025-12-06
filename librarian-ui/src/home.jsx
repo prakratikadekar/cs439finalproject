@@ -41,38 +41,26 @@ export default function Home({ToRecommendationPage}) {
 
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-white px-4">
-            <h1 className='text-3x1 font-bold mb-6'>What do you want to learn today?</h1>
+        <div className="home">
+            <h1 className='title'>What do you want to learn today?</h1>
 
-            <p className="text-3xl font-semibold text-center mb-2">
+            <p className="librarian_description">
                 Type in a political or tech related topic and the Librarian will find the sources for you.
             </p>
 
-            <div>
-                <div>
+            <div className = "search_area">
+                <div className = "search_box">
                     <input type="text" value = {userQuery} onChange = {(e) => setUserQuery(e.target.value)} onKeyDown={(e) => {
                         if (e.key === 'Enter') {
                             handleSubmit(e);
                         }
                     }}
-                    placeholder = "e.g, Clustering Algorithms, Government Shutdown"
-                    disabled = {loading}
-                    
-                    onFocus = {(e) => e.target.style.borderColor = '#a1dffe'}
-                    onBlur = {(e) => e.target.style.borderColor = '#d7ba8e'}
+                        placeholder = "e.g, Clustering Algorithms, Government Shutdown"
+                        disabled = {loading}
+                        className = "search_bar"
                     />
                     <button
-                        onClick = {handleSubmit} disabled = {loading || !userQuery.trim()}
-                        onMouseEnter = {(e) => {
-                            if (!loading && userQuery.trim()) {
-                                e.target.style.backgroundColor = '#a1dffe';
-                            }
-                        }}
-                        onMouseLeave = {(e) => {
-                            if (!loading && userQuery.trim()) {
-                                e.target.style.backgroundColor = '#d7ba8e';
-                            }
-                        }}
+                        onClick = {handleSubmit} disabled = {loading || !userQuery.trim()} className = "search_button"
                     >
                         {loading ? 'Looking For Recs' : 'Search'}
                     </button>

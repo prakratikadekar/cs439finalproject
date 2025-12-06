@@ -1,68 +1,164 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
- 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #4c2e05;
+    margin: 0;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+/* -- HOME PAGE -- */
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c6a788;
+    padding: 20px;
+    text-align: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.librarian_description {
+    font-size: 1.3rem;
+    font-weight: 200;
+    max-width: 75%;
+    margin-bottom: 1rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.search_area {
+    width: 100%;
+    max-width: 60%;
+}
+
+.search_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.search_bar {
+    flex: 1;
+    padding: 10px 30px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.search_button {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #d8c8bb;
+}
+
+
+.search_button:hover:not(:disabled) {
+    background-color: #c98d51;
+}
+
+.search_button:disabled {
+    background-color: #d8c8bb;
+    cursor: not-allowed;
+}
+
+/* -- RECOMMENDATION PAGE -- */
+
+.recommendation {
+    min-height: 100vh;
+    background-color: #c6a788;
+
+}
+
+.recommendation_box {
+    padding: 10px;
+}
+
+.recommendation_inner_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 4px solid;
+}
+
+.recommendation_title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.recommendation_description {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.new_search_button {
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #d8c8bb;
+    font-size: 1.2rem;
+}
+
+.new_search_button:hover {
+    background-color: #c98d51;
+}
+
+.column {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.each_column {
+    flex: 1;
+    min-width: 500px;
+}
+
+.column_title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid;
+}
+
+.recommendation_card {
+    background-color: #d8c8bb;
+    border: 2px solid #4c2e05;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.recommendation_card.has_link {
+    cursor: pointer;
+}
+
+.recommendation_card:hover {
+    box-shadow: 0px 3px 5px;
+}
+
+.each_card_title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.each_card_part {
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 10px;
 }

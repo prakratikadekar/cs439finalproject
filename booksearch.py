@@ -67,12 +67,12 @@ def get_top_3_book_groups(user_input):
         final_recommendations.append(book_dict)
     return final_recommendations
 
-# def main():
-#     if not os.path.exists("book_embedding.npy"):
-#         create_embeddings()
-#     user_input = "Artificial Intelligence"
-#     get_top_3_book_groups(user_input)
+def main():
+    if not os.path.exists("book_embedding.npy"):
+        create_embeddings()
 
 df = pd.read_csv('data/book_data.csv', sep = '\t', encoding = 'utf-8')
 model = SentenceTransformer("all-MiniLM-L6-v2")
-# main()
+
+if __name__ == '__main__':
+    main()

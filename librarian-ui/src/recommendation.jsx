@@ -1,14 +1,14 @@
-import {useState} from "react";
-
 const Cards = ({item}) => (
-    <div className="bg-white p-4 rounded-lg shadow-md mb-4 border-2" style={{borderColor: '#d7ba8e'}}>
-        <h3 className="font-bold text-lg mb-2">
+    <div className = {`recommendation_card ${item.url ? 'has_link' : ''}`} onClick ={() => {
+        if (item.url) window.open(item.url, '_blank');
+    }}>
+        <h3 className="each_card_title">
             {item.title || item}
         </h3>
 
         {
             item.author && (
-                <p className="text-sm text-gray-600 mb-2">
+                <p className="each_card_part">
                     By {item.author}
                 </p>
             )
@@ -16,7 +16,7 @@ const Cards = ({item}) => (
 
         {
             item.description && (
-                <p className="text-sm text-gray-700 mb-2">
+                <p className="each_card_part">
                     {item.description}
                 </p>
             )
@@ -24,33 +24,19 @@ const Cards = ({item}) => (
 
         {
             item.channel && (
-                <p className="text-sm text-gray-600">
+                <p className="each_card_part">
                     Channel: {item.channel}
                 </p>
             )
 
             
         }
-
-        { 
-            item.url && (
-                    <a 
-                        href={item.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline text-sm"
-                    >
-                        View Source
-                    </a>
-            )
-        }
-        
     </div>
 );
 
 const RecommendationColumn = ({title, items }) => (
-    <div className="flex-1 min-w-0">
-        <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2" style={{borderColor: '#d7ba8e'}}> 
+    <div className="each_column">
+        <h2 className="column_title"> 
             {title}
         </h2>
         {
@@ -59,7 +45,7 @@ const RecommendationColumn = ({title, items }) => (
                     <Cards key = {index} item = {item} />
                 ))
             ) : (
-                <p>
+                <p className="each_card_part">
                     No {title.toLowerCase()} found in this query
                 </p>
             )
@@ -71,38 +57,27 @@ export default function Recommend({recommendations, query, ToHomePage}) {
     const {books = [], articles = [], videos = []} = recommendations || {};
     
     return (
-         <div className="min-h-screen bg-gray-50 p-8">
-            <div className="max-w-7xl mx-auto">
-                <div className="mb-8 flex justify-between items-center">
+         <div className="recommendation">
+            <div className="recommendation_box">
+                <div className="recommendation_inner_box">
                     <div>
-                        <h1>
+                        <h1 className = "recommendation_title">
                             Recommendation for: {query}
                         </h1>
                         
-                        <p className="text-gray-600">
+                        <p className="recommendation_description">
                             Here are books, articles, and videos based on what you want to learn.
                         </p>
                     </div>
-                    <button onClick = {ToHomePage}
-                    className="px-6 py-3 rounded-lg font-semibold transition-colors"
-                    style={{backgroundColor: '#d7ba8e', color: 'white'}}
-                        onMouseEnter = {(e) => {
-                            if (query.trim()) {
-                                e.target.style.backgroundColor = '#a1dffe';
-                            } 
-                        }}
-                        onMouseLeave = {(e) => {
-                            if (query.trim()) {
-                                e.target.style.backgroundColor = '#d7ba8e';
-                            }
-                        }}
-                    >
+
+                    <button onClick = {ToHomePage} className="new_search_button">
                         New Search
                     </button>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <div className="column">
                     <RecommendationColumn title = "Books" items = {books} />
-                    <RecommendationColumn title = "articles" items = {articles} />
+                    <RecommendationColumn title = "Articles" items = {articles} />
                     <RecommendationColumn title = "Youtube Videos" items = {videos} />
                 </div>
             </div>

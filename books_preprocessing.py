@@ -50,10 +50,10 @@ def get_all_necessary_books():
 
                 
                 for i, line in enumerate(zip):
-                    if i % 10000 == 0:
+                    if i % 1000000 == 0:
                         print(f"Line Number in Zip: {i}")
 
-                    if "/languages/eng" in line and "/works/" in line and "isbn_" in line and '"description":' in line:
+                    if "/languages/eng" in line and "/works/" in line and '"title":' in line and "isbn_" in line and '"description":' in line and '"authors":' in line:
 
                         if_added = 0
 
@@ -87,7 +87,7 @@ def get_author_name():
     author_lookup_dict = {}
     with gzip.open(author_gz_path, 'rt', encoding='utf-8', errors='ignore') as zip:
         for i, line in enumerate(zip):
-            if i % 100000 == 0:
+            if i % 1000000 == 0:
                 print(f"Line Number in Author Zip: {i}")
             split_line_by_tab = line.strip().split('\t')
             key_data = split_line_by_tab[1].strip()
@@ -113,7 +113,7 @@ def clean_data_to_necessities():
             start = time.time()
 
             for i, line in enumerate(data):
-                if i % 100000 == 0:
+                if i % 10000 == 0:
                     print(f"Line Number in Book txt file: {i}")
 
                 split_line_by_tab = line.strip().split('\t')
