@@ -36,9 +36,12 @@ def recommend_work():
     if not user_input:
         return jsonify({'error': 'no input provided'}, 400)
 
-    try: 
+    try:
+        print(" -- GOING TO YOUTUBE -- ") 
         videos = search_videos(user_input)
+        print(" -- GOING TO NEWS -- ")
         news = get_top_news_matches(user_input)
+        print(" -- GOING TO BOOKS -- ")
         books = get_top_3_book_groups(user_input)
 
 

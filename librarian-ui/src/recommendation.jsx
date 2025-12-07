@@ -31,6 +31,23 @@ const Cards = ({item}) => (
 
             
         }
+
+        {
+            (item.isbn10 || item.isbn13) && (
+                <div>
+                    {
+                        item.isbn10 && (
+                            <p className = "each_card_part">ISBN-10: {item.isbn10}</p>
+                        )
+                    }
+                    {
+                        item.isbn13 && (
+                            <p className = "each_card_part">ISBN-13: {item.isbn13}</p>
+                        )
+                    }
+                </div>
+            )
+        }
     </div>
 );
 
@@ -57,7 +74,7 @@ export default function Recommend({recommendations, query, ToHomePage}) {
     const {books = [], articles = [], videos = []} = recommendations || {};
     
     return (
-         <div className="recommendation">
+        <div className="recommendation">
             <div className="recommendation_box">
                 <div className="recommendation_inner_box">
                     <div>

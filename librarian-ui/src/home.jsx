@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import glasses from './assets/glasses-svgrepo-com.png';
 
 export default function Home({ToRecommendationPage}) {
     const [userQuery, setUserQuery] = useState("")
@@ -42,6 +43,8 @@ export default function Home({ToRecommendationPage}) {
 
     return (
         <div className="home">
+            <img src= {glasses} alt="Librarian Logo"/>
+
             <h1 className='title'>What do you want to learn today?</h1>
 
             <p className="librarian_description">

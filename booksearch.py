@@ -33,6 +33,14 @@ def get_top_3_book_groups(user_input):
     similarities = np.dot(user_input_normalized, book_embedding_normalized.T)
 
     top_matches = np.argsort(similarities[0])[-3:][::-1]
+    top_similarities = similarities[0][top_matches]
+    print(top_similarities)
+
+    valid_matches = []
+
+    for match, similarity in zip(top_matches, top_similarities):
+        if similarity >= 0.4:
+            valid_matches.append(match)
 
     # top_matches_embeddings = book_embedding_normalized[top_matches]
 
@@ -48,7 +56,7 @@ def get_top_3_book_groups(user_input):
     #     most_similar_in_cluster = books_in_cluster_i[np.argmax(cosine_similarity)]
     #     recommendation_list.append(top_matches[most_similar_in_cluster])
     
-    recommended = df.iloc[top_matches]
+    recommended = df.iloc[valid_matches]
 
     # with open('recommended_books.txt', 'a', encoding='utf-8') as file: 
     #     file.write('\n\nNEW RUN:\n')
@@ -65,6 +73,7 @@ def get_top_3_book_groups(user_input):
             'description': str(row['Description']) if pd.notna(row['Description']) else 'No Description Provided'
         }
         final_recommendations.append(book_dict)
+
     return final_recommendations
 
 def main():

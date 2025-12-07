@@ -97,7 +97,6 @@ df = pd.read_csv('data/guardian_filtered.csv', encoding='utf-8')
 # ----------- STEP 8: Write the articles in the txt file ---------------------------------------
 
 def get_top_news_matches(user_input): 
-
     user_input_embedding = model.encode(user_input)
 
     news_embeddings = np.load('news_embeddings.npy')
@@ -115,7 +114,16 @@ def get_top_news_matches(user_input):
     best_matches = np.argsort(similarities[0])[-3:][::-1] # indices of top 3 largest similarities from cosine
     # print('best matches shape: ', best_matches.shape)
 
-    recommended_guardian_articles = df.iloc[best_matches]
+    top_similarities = similarities[0][best_matches]
+    print(top_similarities)
+    valid_matches = []
+
+    for match, similarity in zip(best_matches, top_similarities):
+        if similarity >= 0.4:
+            valid_matches.append(match)
+
+
+    recommended_guardian_articles = df.iloc[valid_matches]
 
     with open('recommended_news.txt', 'a', encoding='utf-8') as file: 
         file.write('\n\nNEW RUN:\n')
