@@ -55,7 +55,9 @@ def filter_df():
         "Technology"
     ]
 
-    filtered_news = df[df['cleaned_section'].isin(sections_to_keep)]
+    cleaned_section = clean_data()[2]
+
+    filtered_news = df[cleaned_section].isin(sections_to_keep)
     filtered_news = filtered_news.reset_index(drop=True)
 
     filtered_news.to_csv('guardian_filtered.csv', index=False)
@@ -78,8 +80,9 @@ def clean_data():
 
     df['cleaned_bodyContent'] = df['bodyContent'].apply(remove_whitespace)
     df['cleaned_title'] = df['webTitle'].apply(remove_whitespace)
+    df['cleaned_section'] = df['sectionName'].apply(remove_whitespace)
 
-    return df['cleaned_title'], df['cleaned_bodyContent']
+    return df['cleaned_title'], df['cleaned_bodyContent'], df['sectionName']
 
 
 
@@ -158,7 +161,7 @@ def get_top_news_matches(user_input):
 
 
 # main:
-# get_top_news_matches('trump')
+get_top_news_matches('trump')
  
 
 
