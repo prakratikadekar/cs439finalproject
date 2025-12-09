@@ -438,3 +438,31 @@ NEW RUN:
 NEW RUN:
       sectionName                                                                                webTitle                                                                                      webUrl
 46783  World news  ‘We want Filipinos to hug themselves’: the P-pop stars reconnecting with their culture  https://www.theguardian.com/world/2022/may/29/filipino-p-pop-stars-singing-local-languages
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+      sectionName                                                                                webTitle                                                                                      webUrl
+46783  World news  ‘We want Filipinos to hug themselves’: the P-pop stars reconnecting with their culture  https://www.theguardian.com/world/2022/may/29/filipino-p-pop-stars-singing-local-languages
+
+NEW RUN:
+      sectionName                                                                       webTitle                                                                                                           webUrl
+15142  Technology  Google to improve YouTube Kids app to let parents control what children watch    https://www.theguardian.com/technology/2018/apr/25/google-youtube-kids-app-parent-control-what-children-watch
+24671  Technology                   YouTube challenges BBC with educational shows for UK viewers  https://www.theguardian.com/technology/2019/aug/29/youtube-challenges-bbc-with-educational-shows-for-uk-viewers
+4999   Technology                              Vine video-sharing app to be shut down by Twitter         https://www.theguardian.com/technology/2016/oct/27/twitter-vine-video-sharing-mobile-app-shut-down-costs
+
+NEW RUN:
+      sectionName                                                                     webTitle                                                                                                               webUrl
+8593      US news  Guardian's Ben Jacobs gets new glasses after assault by Montana congressman                             https://www.theguardian.com/us-news/2017/may/30/guardian-reporter-ben-jacobs-new-glasses
+42131  Technology            Fauna audio glasses review: fashion shades with built-in speakers  https://www.theguardian.com/technology/2021/oct/26/fauna-audio-glasses-review-fashion-shades-with-built-in-speakers
+2263      US news                    Pair of glasses left on US gallery floor mistaken for art            https://www.theguardian.com/us-news/2016/may/27/pair-of-glasses-left-on-us-gallery-floor-mistaken-for-art
