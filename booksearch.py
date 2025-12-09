@@ -1,5 +1,4 @@
 from sentence_transformers import SentenceTransformer
-from sklearn.cluster import KMeans
 import pandas as pd
 import numpy as np
 import os
@@ -42,25 +41,11 @@ def get_top_3_book_groups(user_input):
         if similarity >= 0.4:
             valid_matches.append(match)
 
-    # top_matches_embeddings = book_embedding_normalized[top_matches]
-
-    # kmeans = KMeans(3).fit(top_matches_embeddings)
-    # clusters = kmeans.labels_
-
-    # recommendation_list = []
-
-    # for i in range(3):
-    #     books_in_cluster_i = np.where(clusters == i)[0]
-    #     top_match_cluster_embeddings = top_matches_embeddings[books_in_cluster_i]
-    #     cosine_similarity = np.dot(user_input_normalized, top_match_cluster_embeddings.T)
-    #     most_similar_in_cluster = books_in_cluster_i[np.argmax(cosine_similarity)]
-    #     recommendation_list.append(top_matches[most_similar_in_cluster])
+  
     
     recommended = df.iloc[valid_matches]
 
-    # with open('recommended_books.txt', 'a', encoding='utf-8') as file: 
-    #     file.write('\n\nNEW RUN:\n')
-    #     file.write(recommended[['Title', 'Authors', 'ISBN-10', 'ISBN-13', 'Description']].to_string())
+
 
     final_recommendations = []
  
@@ -85,3 +70,24 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 
 if __name__ == '__main__':
     main()
+
+
+
+  # top_matches_embeddings = book_embedding_normalized[top_matches]
+
+    # kmeans = KMeans(3).fit(top_matches_embeddings)
+    # clusters = kmeans.labels_
+
+    # recommendation_list = []
+
+    # for i in range(3):
+    #     books_in_cluster_i = np.where(clusters == i)[0]
+    #     top_match_cluster_embeddings = top_matches_embeddings[books_in_cluster_i]
+    #     cosine_similarity = np.dot(user_input_normalized, top_match_cluster_embeddings.T)
+    #     most_similar_in_cluster = books_in_cluster_i[np.argmax(cosine_similarity)]
+    #     recommendation_list.append(top_matches[most_similar_in_cluster])
+
+
+        # with open('recommended_books.txt', 'a', encoding='utf-8') as file: 
+    #     file.write('\n\nNEW RUN:\n')
+    #     file.write(recommended[['Title', 'Authors', 'ISBN-10', 'ISBN-13', 'Description']].to_string())
