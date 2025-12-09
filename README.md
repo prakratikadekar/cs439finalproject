@@ -1,5 +1,5 @@
 # Welcome to our data science project: The Librarian
-## Recommending media for politics and computer science topics!
+# Recommending media for politics and computer science topics!
 
 ### Authors: Manas Goswami & Prakrati Kadekar
 
