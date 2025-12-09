@@ -9,11 +9,11 @@ import os
 
 def download_data():
         # could not push this in github so this is how we can get the filtered dataset
-        # kaggle.api.dataset_download_files (
-        #     'prakratikadekar/guardian-filtered',
-        #     path='data/',
-        #     unzip=True
-        # )
+        kaggle.api.dataset_download_files (
+            'prakratikadekar/guardian-filtered',
+            path='data/',
+            unzip=True
+        )
 
         pd.set_option('display.max_rows', None)
         pd.set_option('display.max_columns', None)
