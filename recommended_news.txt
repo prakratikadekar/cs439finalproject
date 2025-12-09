@@ -438,3 +438,33 @@ NEW RUN:
 NEW RUN:
       sectionName                                                                                webTitle                                                                                      webUrl
 46783  World news  ‘We want Filipinos to hug themselves’: the P-pop stars reconnecting with their culture  https://www.theguardian.com/world/2022/may/29/filipino-p-pop-stars-singing-local-languages
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
+
+NEW RUN:
+          sectionName                                                                              webTitle                                                                                                                            webUrl
+16665            News                                                                 Looking back: strikes                                                                 https://www.theguardian.com/news/2018/jul/30/looking-back-strikes
+42303         US news  ‘Striketober’ is showing workers’ rising power – but will it lead to lasting change?                                 https://www.theguardian.com/us-news/2021/oct/23/striketober-unions-strikes-workers-lasting-change
+45009  Australia news           More strikes ‘inevitable’ in NSW as government ramps up anti-union rhetoric  https://www.theguardian.com/australia-news/2022/feb/22/more-strikes-inevitable-in-nsw-as-government-ramps-up-anti-union-rhetoric
+
+NEW RUN:
+      sectionName                                                                 webTitle                                                                                                        webUrl
+19790     US news  #Shutdownstories: federal employees reveal impact of government closure  https://www.theguardian.com/us-news/2018/dec/26/shutdownstories-federal-employees-government-shutdown-impact
+20495     US news       Will the 35-day shutdown lead to privatizing government functions?         https://www.theguardian.com/us-news/2019/jan/27/shutdown-government-functions-will-they-be-privatized
+19897     US news           Shutdown goes on as Trump and Democrats seek to win blame game                    https://www.theguardian.com/us-news/2018/dec/22/donald-trump-democrats-government-shutdown
+
+NEW RUN:
+     sectionName                                                                               webTitle                                                                                                  webUrl
+5608     US news         What kind of president will Trump be? His erratic transition keeps us guessing               https://www.theguardian.com/us-news/2016/nov/25/donald-trump-transition-cabinet-president
+1601     US news  President Trump fills world leaders with fear: 'It's gone from funny to really scary'  https://www.theguardian.com/us-news/2016/apr/28/donald-trump-president-world-leaders-foreign-relations
+6990     US news        Donald Trump's first budget: big hike for defense spending as most agencies cut      https://www.theguardian.com/us-news/2017/feb/27/trumps-budget-54-billion-increase-defense-spending
