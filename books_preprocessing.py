@@ -161,4 +161,5 @@ def main():
 
     print(f"Time to turn data into CSV: {clean_time}")
 
-main()
+if __name__ == '__main__':
+    main()
